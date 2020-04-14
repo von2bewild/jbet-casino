@@ -28,12 +28,36 @@ export const TopNav = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-  figure {
-    height: 56px;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: center;
 
-    img {
-      height: 100%;
+    li {
+      margin: 0 20px;
     }
+    img {
+      height: 56px;
+      margin-right: 50px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 10px;
+        max-width: 25px;
+        max-height: 25px;
+      }
+      .nav-label {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+  aside {
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -60,5 +84,81 @@ export const BottomNav = styled.ul`
     &:hover {
       color: ${colors.green_3};
     }
+  }
+`;
+
+export const LoginForm = styled.div`
+  margin-top: 12px;
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    .textfield {
+      width: 200px;
+      height: 39px;
+      background: #fff;
+      border-radius: 11px;
+      border: none;
+      padding: 0 10px;
+      margin-right: 20px;
+    }
+    .login {
+      width: 93px;
+      height: 39px;
+      background: #c7982b;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+    .signup {
+      width: 158px;
+      height: 39px;
+      background: #00ff55;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #fff;
+      font-size: 12px;
+      i {
+        text-decoration: underline;
+        font-style: normal;
+      }
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
+      color: #fff;
+      strong {
+        color: #18fb64;
+        font-weight: 400;
+      }
+    }
+  }
+`;
+
+export const Settings = styled.div`
+  margin-left: 30px;
+  img {
+    cursor: pointer;
+  }
+  .country-label {
+    color: #fff;
+    margin: 0 0 0 10px;
+  }
+  .menu-dotted {
+    height: 26px;
   }
 `;
