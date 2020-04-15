@@ -162,3 +162,78 @@ export const Settings = styled.div`
     height: 26px;
   }
 `;
+
+export const NavDropdown = styled.aside`
+  height: 260px;
+  width: 100%;
+  position: fixed;
+  top: 147px;
+  left: 0;
+  background: rgba(0, 52, 2, 0.75);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: 0.2s all ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  > section {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  ul {
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+
+    li {
+      text-align: center;
+      cursor: pointer;
+    }
+    &.active {
+      display: flex;
+    }
+    &.live-casino li {
+      flex: 0 0 24%;
+    }
+    &.slots li {
+      flex: 0 0 19%;
+    }
+    &.sports li {
+      flex: 0 0 100%;
+    }
+    &.virtuals li {
+      flex: 0 0 100%;
+    }
+    &.shooting-game li {
+      flex: 0 0 49%;
+    }
+    &.promotions li {
+      flex: 0 0 24%;
+    }
+  }
+  img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    display: block;
+    background: #ddd;
+    margin: auto;
+  }
+  h6 {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    margin: 10px auto 0;
+    font-weight: 600;
+    text-align: center;
+  }
+`;
